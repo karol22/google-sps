@@ -17,7 +17,7 @@
  */
 function addRandomGreeting() {
   const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+      ['I love cats', 'I got to know other countries thanks to math competitions', 'I have 5 siblings', 'My favorite movie is Forrest Gump'];
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
@@ -25,4 +25,31 @@ function addRandomGreeting() {
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
+}
+
+function loadPage(){
+    // Add functions that need to run when the page loads
+    loadGallery();
+}
+function loadGallery(){
+    const num_cats = 15;
+    for(let i = 0; i<num_cats; i++){
+        const filename = "cat_"+i+".jpeg";
+        const img = document.createElement("img");
+        img.setAttribute("src", "images/cats/"+filename);
+                img.setAttribute("class", "inline cat-img");
+        document.getElementById('cats-gallery').appendChild(img); 
+    }
+
+}
+
+function showContent(section_name){
+    let section = document.getElementById(section_name);
+    section.classList.toggle('showing');
+    section.getElementsByClassName("content")[0].classList.toggle("hidden");
+    if(section.classList.contains("showing")){
+        section.getElementsByClassName("arrow")[0].src='images/logos/down-arrow.png';
+    } else{
+        section.getElementsByClassName("arrow")[0].src='images/logos/right-arrow.png'
+    }
 }
