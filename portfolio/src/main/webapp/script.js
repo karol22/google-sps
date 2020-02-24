@@ -27,6 +27,21 @@ function addRandomGreeting() {
   greetingContainer.innerText = greeting;
 }
 
+function loadPage(){
+    // Add functions that need to run when the page loads
+    loadGallery();
+}
+function loadGallery(){
+    const num_cats = 15;
+    for(let i = 0; i<num_cats; i++){
+        const filename = "cat_"+i+".jpeg";
+        const img = document.createElement("img");
+        img.setAttribute("src", "images/cats/"+filename);
+        document.getElementById('cats-gallery').appendChild(img); 
+    }
+
+}
+
 function showContent(section_name){
     let section = document.getElementById(section_name);
     section.classList.toggle('showing');
