@@ -70,13 +70,21 @@
                     Everyone in my family (specially my mom) loves cats. All of our cats were rescued and every time I go to my hometown 
                     I see a new one. This is a gallery of some of them.
                 </p>
-                <div id="cats-gallery" />
+                <div id="cats-gallery"> </div>
             </div>
         </div>
 
-        <p>Click here to get a random message:</p>
-        <button onclick="addRandomGreeting()">Random fact about me</button>
-        <div id="greeting-container"></div>
+        <!--RANDOM-->
+        <div id="random" class="dropdown" >
+            <div onclick="showContent('random')">
+                <img class="arrow inline" src="images/logos/right-arrow.png" />
+                <h2 class="inline">Random</h2>
+            </div>
+            <div class="content hidden" >
+                <button onclick="addRandomGreeting()"><p>Click here to get a random fact about me:</p></button>
+                <p id="greeting-container"></p>
+            </div>
+        </div>
     </div>
     <div>
       Arrow icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
