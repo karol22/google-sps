@@ -23,6 +23,14 @@ p{
   margin-top: 20px;
 }
 
+.arrow{
+  height: 24px;
+  margin-right: 10px;
+  position: relative;
+  top: 4px;
+  width: 24px;
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -37,6 +45,10 @@ p{
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.hidden-content{
+  display: none;
 }
 
 .logo-media{
@@ -62,6 +74,10 @@ p{
   display: block;
   margin: auto;
   width: 20%;
+}
+
+.inline{
+  display: inline;
 }
 
 .social{
