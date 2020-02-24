@@ -37,6 +37,7 @@ function loadGallery(){
         const filename = "cat_"+i+".jpeg";
         const img = document.createElement("img");
         img.setAttribute("src", "images/cats/"+filename);
+                img.setAttribute("class", "inline cat-img");
         document.getElementById('cats-gallery').appendChild(img); 
     }
 
