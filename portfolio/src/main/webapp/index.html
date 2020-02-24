@@ -6,88 +6,13 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body onload="loadPage()">
-    <div class="header">
-      <h1 class="page-heading">
-        SPS Portfolio
-      </h1>
-      <div class="social">
-        <a href="http://github.com/karol22"  target="_blank" >
-          <img  class="logo-media" src="images/logos/github.png" />
-        </a>
-        <a href="https://www.linkedin.com/in/karol-jose-gutierrez-suarez-06a445132/" target="_blank">
-          <img class="logo-media" src="images/logos/linkedin.png" />
-        </a>
-      </div>
-    </div>
-    <div class="main center">
-        <h2 class="center greeting">
-            Hi, I'm Karol!
-        </h2>
-        <img class="profile-picture" src="/images/perfil.jpg" />
-        <p class = "introduction" >
-            I am a senior Computer Science student from Mexico. 
-            My main interests are programming and mathematics. I love to build things 
-            from scratch and learn new things. I want to develop something that helps 
-            many people as well as bring technology to the youth of Mexico.
-        </p>
-    
-        <!--BACKGROUND-->
-        <div id="background" class="dropdown" >
-            <div onclick="showContent('background')">
-              <img class="arrow inline" src="images/logos/right-arrow.png" />
-              <h2 class="inline">Background</h2>
-            </div>
-            <div class="content hidden">
-                <p>
-                    I lived in different small towns and cities when I was a child and I had no idea what to do with my life. 
-                    Then, in 2010 I discovered math contests and started a romance with science and technology. 
-                    In 2015, I wrote my first code in C++ and after that I realized how amazing it would be to be a programmer. 
-                    I learned a little more, started with programming contests and in 2016 I got a full scholarship to study 
-                    Computer Science in a great college here in Mexico.
-                </p>
-                <p>
-                    I'm in my last year of college and currently my favorite subject is Data Science because I love all the math that 
-                    is involved. I'm also collaborating with a professor in a research project of bioinformatics, this is a new kind of 
-                    challenge to me and if it ends well I'll share it with you.
-                </p>
-                <p>
-                    Besides college, I work part in a fintech startup of online loans. This is quite cool to me since it is like a mini bank and 
-                    I can work everyday with people from different areas such as engineering, data science, marketing, etc. Thanks to
-                    this job I have learned many web skills such as Ruby, Golang, Javascript and some frameworks.
-                </p>
-            </div>
-        </div>
-
-        <!--CATS-->
-        <div id="cats" class="dropdown" >
-            <div onclick="showContent('cats')">
-              <img class="arrow inline" src="images/logos/right-arrow.png" />
-              <h2 class="inline">Cats</h2>
-            </div>
-            <div class="content hidden" >
-                <p>
-                    Everyone in my family (specially my mom) loves cats. All of our cats were rescued and every time I go to my hometown 
-                    I see a new one. This is a gallery of some of them.
-                </p>
-                <div id="cats-gallery"> </div>
-            </div>
-        </div>
-
-        <!--RANDOM-->
-        <div id="random" class="dropdown" >
-            <div onclick="showContent('random')">
-                <img class="arrow inline" src="images/logos/right-arrow.png" />
-                <h2 class="inline">Random</h2>
-            </div>
-            <div class="content hidden" >
-                <button onclick="addRandomGreeting()"><p>Click here to get a random fact about me:</p></button>
-                <p id="greeting-container"></p>
-            </div>
-        </div>
-    </div>
-    <div>
-      Arrow icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+  <body>
+    <div id="content">
+      <h1>My Portfolio</h1>
+      <p>This is my portfolio.</p>
+      <p>Click here to get a random message:</p>
+      <button onclick="addRandomGreeting()">Hello</button>
+      <div id="greeting-container"></div>
     </div>
   </body>
 </html>
