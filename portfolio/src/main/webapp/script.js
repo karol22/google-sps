@@ -26,3 +26,14 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+function showContent(section_name){
+    let section = document.getElementById(section_name);
+    section.classList.toggle('showing');
+    section.getElementsByClassName("content")[0].classList.toggle("hidden");
+    if(section.classList.contains("showing")){
+        section.getElementsByClassName("arrow")[0].src='images/logos/down-arrow.png';
+    } else{
+        section.getElementsByClassName("arrow")[0].src='images/logos/right-arrow.png'
+    }
+}

@@ -9,14 +9,8 @@ h2{
 
 p{
   font-family: Arial, Helvetica, sans-serif;
-  font-size: large;
+  font-size: x-large;
   text-align: justify;
-}
-
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
 }
 
 #greeting-container {
@@ -37,6 +31,10 @@ p{
   margin-right: auto;
 }
 
+.content{
+    margin-left: 35px; 
+}
+
 .header{
   background-color: #9bbed6;
   height: 70px;
@@ -47,8 +45,12 @@ p{
   width: 100%;
 }
 
-.hidden-content{
+.hidden{
   display: none;
+}
+
+.inline{
+  display: inline;
 }
 
 .logo-media{
@@ -74,10 +76,6 @@ p{
   display: block;
   margin: auto;
   width: 20%;
-}
-
-.inline{
-  display: inline;
 }
 
 .social{
