@@ -27,9 +27,17 @@ function addRandomGreeting() {
   greetingContainer.innerText = greeting;
 }
 
+function hello() {
+  fetch('/data').then(response => response.text()).then((message) => {
+    document.getElementById('hello').innerHTML = message;
+  });
+}
+
+
 function loadPage(){
     // Add functions that need to run when the page loads
     loadGallery();
+    hello();
 }
 function loadGallery(){
     const num_cats = 15;
