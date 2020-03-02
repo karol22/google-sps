@@ -19,10 +19,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
+    private ArrayList<String> comments = new ArrayList<String>() { 
+        { 
+            add("Hi Karol, how did you learn web development?");
+            add("Hi, I am Mexican too");
+            add("Hi Karol, I hope to see you in California");
+        } 
+    };
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
