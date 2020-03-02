@@ -26,10 +26,21 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+/**
+ * Fetches comments from the servers and adds them to the DOM.
+ */
+function getComments() {
+  fetch('/comments').then(response => response.json()).then((comments) => {
+    for (let i = 0; i< comments.length; i++){
+        console.log(comments[i])
+    }
+  });
+}
 
 function loadPage(){
     // Add functions that need to run when the page loads
     loadGallery();
+    getComments();
 }
 function loadGallery(){
     const num_cats = 15;

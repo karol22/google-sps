@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.io.*; 
 
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
-@WebServlet("/data")
+@WebServlet("/comments")
 public class DataServlet extends HttpServlet {
     private ArrayList<String> comments = new ArrayList<String>();
 
