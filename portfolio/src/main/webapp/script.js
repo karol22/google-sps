@@ -31,8 +31,11 @@ function addRandomGreeting() {
  */
 function getComments() {
   fetch('/comments').then(response => response.json()).then((comments) => {
+    const commentsContainer = document.getElementById('comments-container');
     for (let i = 0; i< comments.length; i++){
-        console.log(comments[i])
+        let comm = document.createElement("P");
+        comm.innerHTML = comments[i];  
+        commentsContainer.appendChild(comm);
     }
   });
 }
@@ -53,6 +56,10 @@ function loadGallery(){
         document.getElementById('cats-gallery').appendChild(img); 
     }
 
+}
+
+function showComments(comments){
+    fo
 }
 
 function showContent(section_name){
