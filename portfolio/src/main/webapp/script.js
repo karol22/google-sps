@@ -58,10 +58,6 @@ function loadGallery(){
 
 }
 
-function showComments(comments){
-    fo
-}
-
 function showContent(section_name){
     let section = document.getElementById(section_name);
     section.classList.toggle('showing');
