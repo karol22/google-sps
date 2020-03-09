@@ -26,19 +26,26 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
-
-function hello() {
-  fetch('/data').then(response => response.text()).then((message) => {
-    document.getElementById('hello').innerHTML = message;
+/**
+ * Fetches comments from the servers and adds them to the DOM.
+ */
+function getComments() {
+  fetch('/comments').then(response => response.json()).then((comments) => {
+    const commentsContainer = document.getElementById('comments-container');
+    for (let i = 0; i< comments.length; i++){
+        let comm = document.createElement("P");
+        comm.innerHTML = comments[i];  
+        commentsContainer.appendChild(comm);
+    }
   });
 }
-
 
 function loadPage(){
     // Add functions that need to run when the page loads
     loadGallery();
-    hello();
+    getComments();
 }
+
 function loadGallery(){
     const num_cats = 15;
     for(let i = 0; i<num_cats; i++){
