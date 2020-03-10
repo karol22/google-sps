@@ -32,8 +32,8 @@ function addRandomGreeting() {
 function getComments() {
   const languagesDropdown = document.getElementById("languages");
   const language = languagesDropdown.options[languagesDropdown.selectedIndex].value;
-  console.log(language)
-  fetch('/comments').then(response => response.json()).then((comments) => {
+
+  fetch('/comments?lang='+language).then(response => response.json()).then((comments) => {
     const commentsContainer = document.getElementById('comments-container');
     for (let i = 0; i< comments.length; i++){
         let comm = document.createElement("P");
