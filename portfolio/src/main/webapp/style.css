@@ -53,6 +53,14 @@ p{
   margin-right: auto;
 }
 
+.comment{
+    border-color: white;
+    border-style: solid;
+    font-size: medium;
+    margin: 10px;
+    padding: 10px;
+}
+
 .content{
     margin-left: 35px; 
 }

@@ -34,7 +34,8 @@ function getComments() {
     const commentsContainer = document.getElementById('comments-container');
     for (let i = 0; i< comments.length; i++){
         let comm = document.createElement("P");
-        comm.innerHTML = comments[i];  
+        comm.innerHTML = comments[i];
+        comm.classList.add("comment");
         commentsContainer.appendChild(comm);
     }
   });
