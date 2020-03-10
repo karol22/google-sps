@@ -35,6 +35,7 @@ function getComments() {
 
   fetch('/comments?lang='+language).then(response => response.json()).then((comments) => {
     const commentsContainer = document.getElementById('comments-container');
+    commentsContainer.innerHTML = "";
     for (let i = 0; i< comments.length; i++){
         let comm = document.createElement("P");
         comm.innerHTML = comments[i];
