@@ -30,6 +30,9 @@ function addRandomGreeting() {
  * Fetches comments from the servers and adds them to the DOM.
  */
 function getComments() {
+  const languagesDropdown = document.getElementById("languages");
+  const language = languagesDropdown.options[languagesDropdown.selectedIndex].value;
+  console.log(language)
   fetch('/comments').then(response => response.json()).then((comments) => {
     const commentsContainer = document.getElementById('comments-container');
     for (let i = 0; i< comments.length; i++){
