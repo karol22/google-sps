@@ -53,10 +53,14 @@ public class DataServlet extends HttpServlet {
             String text = (String) entity.getProperty("text");
             long timestamp = (long) entity.getProperty("timestamp");
             String  comment = text;
-            Translation translation =
-                translate.translate(comment, Translate.TranslateOption.targetLanguage(lang);
-            String translatedText = translation.getTranslatedText();
-            comments.add(translatedText);
+            if(lang.length()>0){
+                Translation translation =
+                translate.translate(comment, Translate.TranslateOption.targetLanguage(lang));
+                String translatedText = translation.getTranslatedText();
+                comments.add(translatedText);
+            } else {
+                comments.add(comment);
+            }
         }
 
         response.setContentType("application/json; charset=UTF-8");
