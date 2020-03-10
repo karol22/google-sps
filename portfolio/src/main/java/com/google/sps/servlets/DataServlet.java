@@ -38,7 +38,6 @@ public class DataServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String lang = request.getParameter("lang");
-        // System.out.println(lang);
         Query query = new Query("Comment").addSort("timestamp", SortDirection.ASCENDING);
 
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
