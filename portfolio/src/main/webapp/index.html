@@ -88,6 +88,19 @@
         </div>
         <!--COMMENTS-->
         <h2>Comments</h2>
+
+        <label for="comments-language">Choose a language:</label>
+
+        <select id="languages" onchange="getComments()">
+            <option value="">Original</option>
+            <option value="en">English</option>
+            <option value="zh">Chinese</option>
+            <option value="hi">Hindi</option>
+            <option value="es">Spanish</option>
+            <option value="ar">Arabic</option>
+        </select>
+
+
         <div id="comments-container"></div>
         <!--SUBMIT COMMENT-->
         <form action="/comments" method="POST">
